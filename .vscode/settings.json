@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "libapi.h": "c",
+        "kernel.h": "c",
+        "stddef.h": "c",
+        "file.h": "c",
+        "stdbool.h": "c",
+        "memory.h": "c",
+        "mem.h": "c",
+        "cd.h": "c",
+        "stdint.h": "c",
+        "libetc.h": "c",
+        "input.h": "c",
+        "sfx.h": "c",
+        "ship.h": "c"
+    }
+}

@@ -1,0 +1,77 @@
+#ifndef _GAME_H
+#define _GAME_H
+
+#include <stddef.h>
+#include <stdint.h>
+#include <stdbool.h>
+
+#define GAME_ASSET_FILENAME_IMAGE_TITLE "\\ASSETS\\IMAGES\\TITLE.TIM;1"
+#define GAME_ASSET_FILENAME_IMAGE_SPRITES "\\ASSETS\\IMAGES\\SPRITES.TIM;1"
+
+#define GAME_ASSET_FILENAME_FONT_BIN_BIG   "\\ASSETS\\FONTS\\PRST2P.BIN;1"
+#define GAME_ASSET_FILENAME_FONT_TIM_BIG   "\\ASSETS\\FONTS\\PRST2P.TIM;1"
+#define GAME_ASSET_FILENAME_FONT_BIN_SMALL "\\ASSETS\\FONTS\\PRST2P8.BIN;1"
+#define GAME_ASSET_FILENAME_FONT_TIM_SMALL "\\ASSETS\\FONTS\\PRST2P8.TIM;1"
+
+#define GAME_ASSET_FILENAME_SOUND_START           "\\ASSETS\\SOUNDS\\START.VAG;1"
+#define GAME_ASSET_FILENAME_SOUND_SHIP_LASER      "\\ASSETS\\SOUNDS\\SHIPLASE.VAG;1"
+#define GAME_ASSET_FILENAME_SOUND_SHIP_EXPLOSION  "\\ASSETS\\SOUNDS\\SHIPEXPL.VAG;1"
+#define GAME_ASSET_FILENAME_SOUND_ENEMY_LASER     "\\ASSETS\\SOUNDS\\ENEMLASE.VAG;1"
+#define GAME_ASSET_FILENAME_SOUND_ENEMY_EXPLOSION "\\ASSETS\\SOUNDS\\ENEMEXPL.VAG;1"
+
+#define GAME_ASSET_FILENAME_FMV_INIT  "\\ASSETS\\FMV\\INIT2.STR;1"
+#define GAME_ASSET_END_FRAME_FMV_INIT 270
+
+#define GAME_ASSET_FILENAME_XA_MUSIC_TITLE     "\\ASSETS\\MUSICS\\MAGSPAC2.XA;1"
+#define GAME_ASSET_FILENAME_XA_MUSIC_PLAYING   "\\ASSETS\\MUSICS\\DIMENS2.XA;1"
+#define GAME_ASSET_FILENAME_XA_MUSIC_GAME_OVER "\\ASSETS\\MUSICS\\DEATH2.XA;1"
+
+#define GAME_IMAGE_ID_SPRITES    0
+#define GAME_IMAGE_ID_TITLE      1
+#define GAME_IMAGE_ID_FONT_BIG   2
+#define GAME_IMAGE_ID_FONT_SMALL 3
+
+#define GAME_TILE_ID_TITLE 0
+
+#define GAME_FONT_ID_BIG   0
+#define GAME_FONT_ID_SMALL 1
+
+#define GAME_SOUND_ID_START           0
+#define GAME_SOUND_ID_SHIP_LASER      1
+#define GAME_SOUND_ID_SHIP_EXPLOSION  2
+#define GAME_SOUND_ID_ENEMY_LASER     3
+#define GAME_SOUND_ID_ENEMY_EXPLOSION 4
+
+extern void game_entry_point(void);
+
+extern bool game_check_collision(int16_t px, int16_t py, int16_t rx, int16_t ry, int16_t rw, int16_t rh);
+
+typedef enum
+{
+    GAME_STATE_ENEMIES_EXCEEDED_MAX_Y,
+    GAME_STATE_ENEMIES_TO_TOP,
+    GAME_STATE_SHOW_ENEMIES,
+    GAME_STATE_READY,
+    GAME_STATE_PLAYING,
+    GAME_STATE_SHIP_EXPLODING,
+    GAME_STATE_LEVEL_CLEARED,
+    GAME_STATE_GAME_OVER
+} GAME_STATE;
+
+extern GAME_STATE game_state;
+extern uint32_t game_state_time;
+
+extern uint32_t game_level;
+extern uint32_t game_lives;
+extern uint32_t game_score;
+
+#define GAME_INITIAL_HISCORE 1000
+
+extern uint32_t game_hi_score;
+
+extern void game_reset(void);
+extern void game_add_score(uint32_t points);
+extern void game_update_hiscore();
+extern void game_next_level(void);
+
+#endif /* _GAME_H */

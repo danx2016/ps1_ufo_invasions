@@ -6,5 +6,8 @@
 *.dep
 *.o
 *.a
+*.bin
+*.cue
+!assets/fonts/*.bin
 PSX.Dev-README.md
 third_party/psyq

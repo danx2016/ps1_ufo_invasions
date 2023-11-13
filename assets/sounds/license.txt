@@ -1,0 +1,11 @@
+----------------------
+sounds: 63 Digital sound effects (lasers, phasers, space etc.)
+author: Kenney
+license: public domain
+original link: https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc
+
+----------------------
+sounds: 512 Sound Effects (8-bit style)
+author: SubspaceAudio
+license: public domain
+original link: https://opengameart.org/content/512-sound-effects-8-bit-style

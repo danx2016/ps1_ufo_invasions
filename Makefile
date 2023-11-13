@@ -2,7 +2,25 @@
 TARGET = ps1_ufo_invasions
 TYPE = ps-exe
 
-SRCS = third_party/nugget/common/crt0/crt0.s main.c
+SRCS = third_party/nugget/common/crt0/crt0.s \
+main.c \
+mem.c \
+cd.c \
+sfx.c \
+asset.c \
+gfx.c \
+gfx_font.c \
+fmv.c \
+input.c \
+scene_manager.c \
+scene_init.c \
+scene_title.c \
+scene_playing.c \
+game.c \
+ship.c \
+bullets.c \
+enemies.c \
+shields.c \
 
 CPPFLAGS += -Ithird_party/psyq-iwyu/include
 LDFLAGS += -Lthird_party/psyq/lib

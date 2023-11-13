@@ -1,0 +1,4 @@
+Image: Assets for a space invader-like game
+Author: Clear_code
+License: CC-BY 4.0
+Original link: https://opengameart.org/content/assets-for-a-space-invader-like-game
