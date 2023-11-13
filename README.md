@@ -31,4 +31,4 @@ mkpsxiso.exe -y isoconfig.xml
 ## Special Thanks To ##
 * @Nicolas Noble , @spicyjpeg, @Stenzek..
 * and all nice people from PSX.Dev
-* 
+
